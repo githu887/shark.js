@@ -1,11 +1,10 @@
+alert("MOD LOADED");
+
 runAfterLoad(function() {
-
-elements.shark = {
-    color: "#3f6f8f",
-    behavior: behaviors.WALL,
-    category: "life",
-    state: "solid",
-    density: 1000
-};
-
+    elements.test_element = {
+        color: "#ff0000",
+        behavior: behaviors.WALL,
+        category: "life",
+        state: "solid"
+    };
 });
