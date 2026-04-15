@@ -1,8 +1,10 @@
-console.log("MOD IS RUNNING");
+if (typeof elements !== "undefined" && typeof behaviors !== "undefined") {
 
 elements.shark = {
-    color: "#ff0000",
+    color: "#3f6f8f",
     behavior: behaviors.WALL,
     category: "life",
     state: "solid"
 };
+
+}
