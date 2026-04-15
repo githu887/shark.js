@@ -1,10 +1,8 @@
-alert("MOD LOADED");
+console.log("MOD IS RUNNING");
 
-runAfterLoad(function() {
-    elements.test_element = {
-        color: "#ff0000",
-        behavior: behaviors.WALL,
-        category: "life",
-        state: "solid"
-    };
-});
+elements.shark = {
+    color: "#ff0000",
+    behavior: behaviors.WALL,
+    category: "life",
+    state: "solid"
+};
