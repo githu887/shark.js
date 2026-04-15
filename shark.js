@@ -1,2 +1,15 @@
-// made by squarescreamytelements.shark = {    color: ["#c05811","#cf7941","#d4ccc5","#ffe7b3","#f7b484","#ef7d51","#c15c37","#8e4024","#5f2612","#3a2930","#6b4540","#9d654f","#c68b68","#e2b98d","#ffe8aa","#292c33","#4b4f55","#76797e","#a5a6a7","#d5cfcd","#fff1e8"],state: "solid",    behavior: [        "M2%1|M2%2|M2%1",        "M2%10|XX|M2%10",        "XX|M1|XX",    ],    reactions: {        "meat": { elem2:null, chance:0.2, func:behaviors.FEEDPIXEL },        "cooked_meat": { elem2:null, chance:0.2, func:behaviors.FEEDPIXEL },        "fish": { elem2:null, chance:0.2, func:behaviors.FEEDPIXEL },        "rat": { elem2:null, chance:0.2, func:behaviors.FEEDPIXEL },        "cat_food": { elem2:null, chance:0.3, func:behaviors.FEEDPIXEL },        "oxygen": { elem2:"carbon_dioxide", chance:0.3 },        "mercury": { elem1:"rotten_meat", chance:0.1 },        "bleach": { elem1:"rotten_meat", chance:0.1 },        "infection": { elem1:"rotten_meat", chance:0.025 },        "uranium": { elem1:"rotten_meat", chance:0.1 },        "cyanide": { elem1:"rotten_meat", chance:0.1 },        "chlorine": { elem1:"meat", chance:0.1 },        "alcohol": { elem1:"meat", chance:0.025 },        "dirty_water": { elem1:"rotten_meat", chance:0.0001 },        "pool_water": { elem1:"rotten_meat", chance:0.005 },        "vinegar": { elem1:"rotten_meat", chance:0.001 },    },
+elements.shark = {
+    color: "#3f6f8f",
+    category: "life",
+    state: "solid",
 
+    tick: function(pixel) {
+        let dirs = [
+            [1,0],[-1,0],[0,1],[0,-1]
+        ];
+
+        let d = dirs[Math.floor(Math.random() * dirs.length)];
+
+        tryMove(pixel, pixel.x + d[0], pixel.y + d[1]);
+    }
+};
